@@ -11,20 +11,18 @@ object Constants {
         // 1
         val questionOne = Question(
             1,
-            "What country does this flag belongs to?",
-            R.drawable.ic_flag_of_argentina,
-            arrayListOf("Argentina", "Australia", "Armenia", "Austria"),
-            0,
+            "What is the recommended duration for cardiovascular exercise per week, according to fitness guidelines?",
+            arrayListOf("30 minutes", "60 minutes", "90 minutes", "120 minutes"),
+            1,
         )
         questionsList.add(questionOne)
 
         // 2
         val questionTwo = Question(
             2,
-            "What country does this flag belong to?",
-            R.drawable.ic_flag_of_australia,
-            arrayListOf("Angola", "Austria",
-            "Australia", "Armenia"),
+            "Which of the following exercises primarily targets the abdominal muscles?",
+
+            arrayListOf("Squats", "Push-ups", "Crunches", "Lunges"),
             2
         )
         questionsList.add(questionTwo)
@@ -32,32 +30,29 @@ object Constants {
         // 3
         val questionThree = Question(
             3,
-            "What country does this flag belong to?",
-            R.drawable.ic_flag_of_brazil,
-            arrayListOf("Belarus", "Belize",
-            "Brunei", "Brazil"),
-            3
+            "How many days a week is it recommended to engage in strength training exercises?",
+
+            arrayListOf("1-2 days", "3-4 days", "5-6 days", "Every day"),
+            1
         )
         questionsList.add(questionThree)
 
         // 4
         val questionFour = Question(
             4,
-            "What country does this flag belong to?",
-            R.drawable.ic_flag_of_belgium,
-            arrayListOf("Bahamas", "Belgium",
-            "Barbados", "Belize"),
-            1
+            "What does BMI stand for in relation to fitness and health?",
+
+            arrayListOf("Body Mass Index", "Body Measurement Index", "Body Muscle Index", "Body Metabolic Index"),
+            0
         )
         questionsList.add(questionFour)
 
         // 5
         val questionFive = Question(
             5,
-            "What country does this flag belong to?",
-            R.drawable.ic_flag_of_fiji,
-            arrayListOf("Gabon", "France",
-            "Fiji", "Finland"),
+            "Which of the following is a high-intensity interval training (HIIT) exercise?",
+
+            arrayListOf("Walking", "Cycling", "Sprinting", "Yoga"),
             2
         )
         questionsList.add(questionFive)
@@ -65,11 +60,10 @@ object Constants {
         // 6
         val questionSix = Question(
             6,
-            "What country does this flag belong to?",
-            R.drawable.ic_flag_of_germany,
-            arrayListOf("Germany", "Georgia",
-            "Greece", "none of these"),
-            0
+            "What is the recommended amount of water intake per day for adults?",
+
+            arrayListOf("1 liter", "2 liters", "3 liters", "4 liters"),
+            1
         )
 
         questionsList.add(questionSix)
@@ -77,10 +71,9 @@ object Constants {
         // 7
         val questionSeven = Question(
             7,
-            "What country does this flag belong to?",
-            R.drawable.ic_flag_of_denmark,
-            arrayListOf("Dominica", "Egypt",
-            "Denmark", "Ethiopia"),
+            "Which of the following nutrients is the body's main source of energy?",
+
+            arrayListOf("Protein", "Fat", "Carbohydrates", "Vitamins"),
             2
         )
         questionsList.add(questionSeven)
@@ -88,35 +81,82 @@ object Constants {
         // 8
         val questionEight = Question(
             8,
-            "What country does this flag belong to?",
-            R.drawable.ic_flag_of_india,
-            arrayListOf("Ireland", "Iran",
-            "Hungary", "India"),
-            3
+            "What is the ideal resting heart rate for adults?",
+
+            arrayListOf("40-50 beats per minute", "60-100 beats per minute", "100-120 beats per minute", "120-140 beats per minute"),
+            1
         )
         questionsList.add(questionEight)
 
         // 9
         val questionNine = Question(
             9,
-            "What country does this flag belong to?",
-            R.drawable.ic_flag_of_new_zealand,
-            arrayListOf("Australia", "New Zealand",
-            "Tuvalu", "United States of America"),
-            1
+            "Which type of stretching is best performed after a workout to improve flexibility?",
+
+            arrayListOf("Static stretching", "Dynamic stretching", "PNF stretching", "Ballistic stretching"),
+            0
         )
         questionsList.add(questionNine)
 
         // 10
         val questionTen = Question(
             10,
-            "What country does this flag belong to?",
-            R.drawable.ic_flag_of_kuwait,
-            arrayListOf("Kuwait", "Jordan",
-            "Sudan", "Palestine"),
+            "What is the correct form for a proper squat?",
+
+            arrayListOf("Keep knees behind toes", "Arch the back", "Lean forward", "Lift heels off the ground"),
             0
         )
         questionsList.add(questionTen)
+
+        // 11
+        val questionEleven = Question(
+            11,
+            "Which of the following is NOT a component of physical fitness?",
+
+            arrayListOf("Strength", "Endurance", "Agility", "Relaxation"),
+            3
+        )
+        questionsList.add(questionEleven)
+
+        // 12
+        val questionTwelve = Question(
+            12,
+            "What is the recommended amount of sleep for adults per night?",
+
+            arrayListOf("4-5 hours", "6-7 hours", "8-9 hours", "10-11 hours"),
+            2
+        )
+        questionsList.add(questionTwelve)
+
+        // 13
+        val questionThirteen = Question(
+            13,
+            "What is the purpose of a warm-up before exercising?",
+
+            arrayListOf("Prevent injury", "Increase heart rate abruptly", "Improve flexibility", "Cool down the body"),
+            0
+        )
+        questionsList.add(questionThirteen)
+
+        // 14
+        val questionFourteen = Question(
+            14,
+            "Which of the following activities provides both cardiovascular and strength training benefits?",
+
+            arrayListOf("Swimming", "Yoga", "Pilates", "Tai Chi"),
+            0
+        )
+        questionsList.add(questionFourteen)
+
+        // 15
+        val questionFifteen = Question(
+            15,
+            "What is the term for the maximum amount of weight a person can lift for a specific exercise?",
+
+            arrayListOf("1RM (One Repetition Maximum)", "ORM (Overall Repetition Maximum)", "ERM (Exercise Repetition Maximum)", "MRM (Maximum Repetition Maximum)"),
+            0
+        )
+        questionsList.add(questionFifteen)
 
         return questionsList
     }

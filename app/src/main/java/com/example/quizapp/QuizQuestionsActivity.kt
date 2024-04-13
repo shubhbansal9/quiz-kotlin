@@ -28,7 +28,12 @@ class QuizQuestionsActivity : AppCompatActivity() {
     private var tvProgress: TextView? = null
     private var btnSubmit: Button? = null
     private var tvAlternatives: ArrayList<TextView>? = null
-
+    private var tvLevel: TextView? = null
+    private val levels = mapOf(
+        1 to arrayListOf(1, 2, 3, 4, 5),  // Level 1
+        2 to arrayListOf(6, 7, 8, 9, 10), // Level 2
+        3 to arrayListOf(11, 12, 13, 14, 15) // Level 3
+    )
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz_questions)
@@ -46,6 +51,21 @@ class QuizQuestionsActivity : AppCompatActivity() {
             findViewById(R.id.optionThree),
             findViewById(R.id.optionFour),
         )
+        val questions = Constants.getQuestions()
+        tvLevel = findViewById(R.id.tvLevel)
+        val levels = mapOf(
+            1 to arrayListOf(1, 2, 3, 4, 5),  // Level 1
+            2 to arrayListOf(6, 7, 8, 9, 10), // Level 2
+            3 to arrayListOf(11, 12, 13, 14, 15) // Level 3
+        )
+
+        val currentLevel = getCurrentLevel(questions[currentQuestionIndex].id, levels)
+        if (currentLevel != null) {
+            tvLevel?.text ?: "Level $currentLevel"
+            tvLevel?.visibility ?: View.VISIBLE
+        } else {
+            tvLevel?.visibility ?: View.GONE
+        }
 
         updateQuestion()
 
@@ -99,14 +119,22 @@ class QuizQuestionsActivity : AppCompatActivity() {
             }
         }
     }
-
+    private fun getCurrentLevel(questionId: Int, levels: Map<Int, ArrayList<Int>>): Int? {
+        for ((level, questionIds) in levels) {
+            if (questionId in questionIds) {
+                return level
+            }
+        }
+        return null
+    }
     private fun updateQuestion() {
         defaultAlternativesView()
 
         // Render Question Text
         tvQuestion?.text = questionsList[currentQuestionIndex].questionText
         // Render Question Image
-        ivImage?.setImageResource(questionsList[currentQuestionIndex].image)
+        val currentLevel = getCurrentLevel(questionsList[currentQuestionIndex].id, levels)
+        tvLevel?.text = currentLevel?.let { "Level $it" } ?: ""
         // progressBar
         progressBar?.progress = currentQuestionIndex + 1
         // Text of progress bar
